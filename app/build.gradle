@@ -21,6 +21,9 @@ android {
         }
     }
 
+    lintOptions { // 新增
+        abortOnError false
+    }
 }
 
 dependencies {

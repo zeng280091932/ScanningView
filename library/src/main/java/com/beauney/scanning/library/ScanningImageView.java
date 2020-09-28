@@ -154,7 +154,7 @@ public class ScanningImageView extends View {
     }
 
     public void start() {
-        if (mSrcBitmap == null){
+        if (mSrcBitmap == null) {
             return;
         }
         post(new Runnable() {

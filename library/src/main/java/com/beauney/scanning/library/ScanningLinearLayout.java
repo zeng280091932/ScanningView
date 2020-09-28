@@ -110,7 +110,7 @@ public class ScanningLinearLayout extends LinearLayout {
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
 
-        int sc=canvas.saveLayer(0,0,getWidth(),getHeight(),mScanPaint, Canvas.ALL_SAVE_FLAG);
+        int sc = canvas.saveLayer(0, 0, getWidth(), getHeight(), mScanPaint, Canvas.ALL_SAVE_FLAG);
         canvas.drawBitmap(mBitmap, mLeft, 0, mScanPaint);
         mScanPaint.setXfermode(mPorterDuffXfermode);
         canvas.drawBitmap(mRounderBitmap, 0, 0, mScanPaint);
