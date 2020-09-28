@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000">
+
+    <FrameLayout
+        android:layout_width="283dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_demand_3" />
+
+        <com.beauney.scanning.library.ScanningView
+            android:tag="scanning_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="283dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="323dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_demand_4" />
+
+        <com.beauney.scanning.library.ScanningView
+            android:tag="scanning_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="283dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="626dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/temp_demand_5" />
+
+        <com.beauney.scanning.library.ScanningView
+            android:tag="scanning_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"/>
+    </FrameLayout>
+</RelativeLayout>

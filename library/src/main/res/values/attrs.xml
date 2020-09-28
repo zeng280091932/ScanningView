@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--扫光ImageView-->
+    <declare-styleable name="ScanningImageView">
+        <attr name="lightColor" format="color" />
+    </declare-styleable>
+</resources>
