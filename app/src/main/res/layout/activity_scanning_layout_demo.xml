@@ -3,10 +3,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="4" />
+        android:text="开始"
+        android:onClick="startScanning"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="结束"
+        android:onClick="stopScanning"/>
+
+    <com.beauney.scanning.library.ScanningLinearLayout
+        android:id="@+id/scanning_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/language_cn_btn"
+            android:layout_width="127dp"
+            android:layout_height="27dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="中文"
+            android:textColor="#999999"
+            android:background="@drawable/language_cn_nor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/language_en_btn"
+            android:layout_width="127dp"
+            android:layout_height="27dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="English"
+            android:background="@drawable/language_en_sel"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </com.beauney.scanning.library.ScanningLinearLayout>
 </RelativeLayout>
