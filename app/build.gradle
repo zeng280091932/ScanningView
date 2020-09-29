@@ -28,6 +28,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.beauney.scanning:scanning-view:1.0.0'
 
     implementation project(':library')
     debugImplementation project(':library')

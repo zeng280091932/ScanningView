@@ -2,9 +2,11 @@ package com.beauney.scanning.library;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
@@ -43,18 +45,22 @@ public class ScanningView extends View {
 
     private float mTranslateY;
 
+    private int mLightImage;
+
     public ScanningView(@NonNull Context context) {
         super(context);
         init();
     }
 
     public ScanningView(@NonNull Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public ScanningView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ScanningView);
+        mLightImage = typedArray.getResourceId(R.styleable.ScanningView_lightImage, R.drawable.scanning_view_light);
+        typedArray.recycle();
         init();
     }
 
@@ -93,7 +99,7 @@ public class ScanningView extends View {
 
     private void init() {
         //初始化光图片
-        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.scanning_view_light);
+        mBitmap = BitmapFactory.decodeResource(getResources(), mLightImage);
         mSrcRect = new Rect(0, 0, mBitmap.getWidth(), mBitmap.getHeight());
         mDestRest = new RectF();
         mTranslateY = mStartY = -mBitmap.getHeight();
