@@ -4,6 +4,16 @@
         <attr name="lightImage" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="ScanningRoundView">
+        <attr name="roundLightImage" format="reference" />
+        <attr name="roundRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ScanningLinearLayout">
+        <attr name="layoutLightImage" format="reference" />
+        <attr name="layoutRadius" format="dimension" />
+    </declare-styleable>
+
     <!--扫光ImageView-->
     <declare-styleable name="ScanningImageView">
         <attr name="lightColor" format="color" />

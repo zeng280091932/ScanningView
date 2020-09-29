@@ -2,6 +2,7 @@ package com.beauney.scanning.library;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -27,7 +28,7 @@ import androidx.annotation.Nullable;
  */
 public class ScanningRoundView extends View {
     private static final long ANIMATOR_DURATION = 1000L;
-    private static final int DEFAULT_ROUND_DP = 7;
+    private static final int DEFAULT_RADIUS_DP = 7;
 
     private Bitmap mBitmap;
 
@@ -47,18 +48,25 @@ public class ScanningRoundView extends View {
 
     private PorterDuffXfermode mPorterDuffXfermode;
 
+    private int mLightImage;
+
+    private int mRadius;
+
     public ScanningRoundView(Context context) {
         super(context);
         init();
     }
 
     public ScanningRoundView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public ScanningRoundView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ScanningRoundView);
+        mLightImage = typedArray.getResourceId(R.styleable.ScanningRoundView_roundLightImage, R.drawable.round_light);
+        mRadius = typedArray.getDimensionPixelOffset(R.styleable.ScanningRoundView_roundRadius, DEFAULT_RADIUS_DP);
+        typedArray.recycle();
         init();
     }
 
@@ -66,12 +74,12 @@ public class ScanningRoundView extends View {
         mRounderBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(mRounderBitmap);
         //绘制圆角矩形
-        canvas.drawRoundRect(new RectF(0, 0, getWidth(), getHeight()), DisplayUtil.dip2px(getContext(), DEFAULT_ROUND_DP), DisplayUtil.dip2px(getContext(), DEFAULT_ROUND_DP), mRounderPaint);
+        canvas.drawRoundRect(new RectF(0, 0, getWidth(), getHeight()), DisplayUtil.dip2px(getContext(), mRadius), DisplayUtil.dip2px(getContext(), mRadius), mRounderPaint);
     }
 
     private void init() {
         //初始化光图片
-        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.round_light);
+        mBitmap = BitmapFactory.decodeResource(getResources(), mLightImage);
         mLeft = mStart = -mBitmap.getWidth();
 
         //初始化画笔 设置抗锯齿和防抖动

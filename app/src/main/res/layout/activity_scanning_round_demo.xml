@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="2" />
+        android:text="开始"
+        android:onClick="startScanning"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="结束"
+        android:onClick="stopScanning"/>
+
+    <FrameLayout
+        android:id="@+id/next_text_container"
+        android:layout_width="334dp"
+        android:layout_height="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp">
+
+        <View
+            android:id="@+id/next_text_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ad_text_bg_shape" />
+
+        <TextView
+            android:id="@+id/next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="按OK键进入下一步"
+            android:textColor="#dddddd"
+            android:textSize="18sp" />
+
+        <ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/video_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="294dp"
+            android:layout_height="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="14dp"
+            android:layout_marginStart="20dp"
+            android:background="@null"
+            android:progress="100"
+            android:progressDrawable="@drawable/ad_progress_selector"/>
+
+        <com.beauney.scanning.library.ScanningRoundView
+            android:id="@+id/scanning_round_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
 </RelativeLayout>
