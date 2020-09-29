@@ -1,7 +1,7 @@
 # ScanningView
 安卓智能电视平台自定义控件，用于控件获得焦点时显示扫光效果。
 # 效果展示
-![效果展示](https://github.com/zeng280091932/ScanningView/blob/master/ImageForReadme/scanning1.gif)
+![效果展示](.\ImageForReadme\scanning1.gif)
 # 使用步骤
 1. 引入library
 
