@@ -5,7 +5,7 @@
 # 使用步骤
 1. 引入library
 
-```implementation 'com.beauney.scanning:scanning-view:1.0.0'```
+```implementation 'com.beauney.scanning:scanning-view:1.0.1'```
 
 2. xml中使用控件
 

@@ -40,7 +40,7 @@ publish {
     userOrg = 'zengxiaotao1987'//bintray.com用户名
     groupId = 'com.beauney.scanning'//jcenter上的路径
     artifactId = 'scanning-view'//项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '1.0.1'//版本号
     desc = 'This is a custom widget of Android smart TV platform, which is used to display the sweeping effect when the widget gets focus.'//描述，不重要
     website = 'https://github.com/zeng280091932/ScanningView'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
