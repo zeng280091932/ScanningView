@@ -61,6 +61,8 @@
         <com.beauney.scanning.library.ScanningRoundView
             android:id="@+id/scanning_round_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:roundRadius="7dp"
+            app:roundLightImage="@drawable/round_light"/>
     </FrameLayout>
 </RelativeLayout>
