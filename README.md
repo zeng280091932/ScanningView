@@ -5,7 +5,7 @@ Android TV开发与手机开发最大的不同点就是焦点，TV常用的操�
 ![海报扫光效果](https://img-blog.csdnimg.cn/20200930102401482.gif)  
 ![带圆角的控件扫光效果，光效不会超过圆角的位置](https://img-blog.csdnimg.cn/20200930102141458.gif)  
 ![扫光容器，可以在扫光容器中放子控件](https://img-blog.csdnimg.cn/20200930102706939.gif)  
-![图片扫光效果，光效与图片中不透明内容交融的一种效果](https://img-blog.csdnimg.cn/20200930102706939.gif)
+![图片扫光效果，光效与图片中不透明内容交融的一种效果](https://img-blog.csdnimg.cn/20200930102927223.gif)
 
 # 使用步骤
 1. 引入library
